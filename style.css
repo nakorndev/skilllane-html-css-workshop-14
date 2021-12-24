@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #313131;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    background-color: #ffd3f2;
+    padding: .8em 1.5em;
+    border-radius: 5px;
+    color: #7e0058;
+    text-decoration: none;
+}
+
+@keyframes background-animate {
+    from {
+        filter: blur(10px) grayscale(1);
+        transform: scale(1.1);
+    }
+    to {
+        filter: blur(0) grayscale(0);
+        transform: scale(1);
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('img/pexels-sharad-kachhi-7199194.jpg');
+    background-size: cover;
+    background-position: center;
+    animation-name: background-animate;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    padding: 1em 2em;
+    border-radius: 5px;
+}
